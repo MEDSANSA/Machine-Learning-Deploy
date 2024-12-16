@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Happy</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='assets/images/emoji.png')}}" />
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/LineIcons.2.0.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/animate.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/tiny-slider.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/glightbox.min.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+    <style>
+        .logo {
+            font-family: '', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start Header Area -->
+    <header class="navbar navbar-expand-lg bg-bs-blue fixed-top py-1" style="background-color: #F4C430;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo">
+                    Génies réunis
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('home') }}" class="nav-link">Prediction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('filtres') }}" class="nav-link">Recommendation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('dashbord') }}" class="nav-link">Rapport</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#footer" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- End Header Area -->
+
+    <!-- Start Hero Area -->
+
+    {% block solution %}
+    {% endblock %}
+    <!-- End Hero Area -->
+
+    <!-- Start Features Area -->
+
+    {% block content %}
+    {% endblock %}
+    <!-- End Features Area -->
+
+    <!-- Start Footer Area -->
+    <footer class="footer" id="footer">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-about">
+                            <div class="logo">
+                                Génies réunis
+                            </div>
+                            <ul class="social">
+                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-pinterest"></i></a></li>
+                            </ul>
+                            <p class="copyright-text">Designed and Developed nahna</p>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer f-link">
+                                    <h3>Solutions</h3>
+                                    <ul>
+                                        <li><a href="javascript:void(0)">Marketing</a></li>
+                                        <li><a href="javascript:void(0)">Analytics</a></li>
+                                        <li><a href="javascript:void(0)">Commerce</a></li>
+                                        <li><a href="javascript:void(0)">Insights</a></li>
+                                        <li><a href="javascript:void(0)">Promotion</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer f-link">
+                                    <h3>Support</h3>
+                                    <ul>
+                                        <li><a href="javascript:void(0)">Pricing</a></li>
+                                        <li><a href="javascript:void(0)">Documentation</a></li>
+                                        <li><a href="javascript:void(0)">Guides</a></li>
+                                        <li><a href="javascript:void(0)">API Status</a></li>
+                                        <li><a href="javascript:void(0)">Live Support</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer f-link">
+                                    <h3>Company</h3>
+                                    <ul>
+                                        <li><a href="javascript:void(0)">About Us</a></li>
+                                        <li><a href="javascript:void(0)">Our Blog</a></li>
+                                        <li><a href="javascript:void(0)">Jobs</a></li>
+                                        <li><a href="javascript:void(0)">Press</a></li>
+                                        <li><a href="javascript:void(0)">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer f-link">
+                                    <h3>Legal</h3>
+                                    <ul>
+                                        <li><a href="javascript:void(0)">Terms & Conditions</a></li>
+                                        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                                        <li><a href="javascript:void(0)">Catering Services</a></li>
+                                        <li><a href="javascript:void(0)">Customer Relations</a></li>
+                                        <li><a href="javascript:void(0)">Innovation</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Top -->
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="{{url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/wow.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/tiny-slider.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/glightbox.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/count-up.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+    <script type="text/javascript">
+        //====== counter up 
+        var cu = new counterUp({
+            start: 0,
+            duration: 2000,
+            intvalues: true,
+            interval: 100,
+            append: " ",
+        });
+        cu.start();
+    </script>
+</body>
+
+</html>

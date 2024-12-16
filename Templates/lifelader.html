@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="features" class="features section">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <h2 class="text-center">Predict Life Ladder</h2>
+            <form method="POST" action="/predict" class="shadow p-4 rounded border">
+                <!-- Form Fields -->
+                <div class="mb-3">
+                    <label for="log_gdp" class="form-label">Log GDP per capita</label>
+                    <input type="number" step="any" name="log_gdp" id="log_gdp" class="form-control" step="1" min="7" max="11" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="social_support" class="form-label">Social Support</label>
+                    <input type="number" step="any" name="social_support" id="social_support" step="0.1" min="0" max="1" class="form-control"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="healthy_life_expectancy" class="form-label">Healthy Life Expectancy</label>
+                    <input type="number" step="any" name="healthy_life_expectancy" id="healthy_life_expectancy" class="form-control" step="1" min="40" max="85" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="freedom_to_make_life_choices" class="form-label">Freedom to make life choices</label>
+                    <input type="number" step="any" name="freedom_to_make_life_choices"
+                        id="freedom_to_make_life_choices" class="form-control" step="0.1" min="0" max="1" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="generosity" class="form-label">Generosity</label>
+                    <input type="number" step="any" name="generosity" id="generosity" class="form-control" step="0.1" min="-0.5" max="0.5" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="perceptions_of_corruption" class="form-label">Perceptions of corruption</label>
+                    <input type="number" step="any" name="perceptions_of_corruption" id="perceptions_of_corruption"
+                        class="form-control" step="0.1" min="0" max="1" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="positive_affect" class="form-label">Positive affect</label>
+                    <input type="number" step="any" name="positive_affect" id="positive_affect" class="form-control" step="0.1" min="0" max="1" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="negative_affect" class="form-label">Negative affect</label>
+                    <input type="number" step="any" name="negative_affect" id="negative_affect" class="form-control" step="0.1" min="0" max="1" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100" style="background-color: #F4C430; border: #F4C430;">Predict</button>
+            </form>
+
+            {% if prediction is not none %}
+            <div class="alert alert-info mt-4">
+                <h4 class="alert-heading">Prédiction du Life Ladder :</h4>
+                <p>{{ prediction }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

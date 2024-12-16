@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="features" class="features section">
+    <div class="row align-items-center">
+        <h1 class="my-4">Recommandations de pays selon différents critères</h1>
+
+        <!-- Formulaire aligné à droite -->
+        <div class="mb-4 d-flex justify-content-end">
+            <form method="POST" action="/filtres" class="d-flex" id="criteria-form">
+                <div class="form-group mb-0 me-2">
+                    <select name="criteria" id="criteria" class="form-control" onchange="this.form.submit()">
+                        <option value="#">Choisir un critère :</option>
+                        <option value="happy_countries">Bon niveau de bonheur et soutien social</option>
+                        <option value="long_life_countries">Bonne espérance de vie et faible corruption</option>
+                        <option value="free_countries">Liberté individuelle et générosité élevée</option>
+                        <option value="secure_countries">Pays les plus sécurisés</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <table id="results-table" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pays</th>
+                    <th>Life Ladder</th>
+                    <th>Social Support</th>
+                    <th>Espérance de Vie</th>
+                    <th>Générosité</th>
+                    <th>Perception de la Corruption</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if results %}
+                {% for item in results %}
+                <tr>
+                    <td>{{ item['Country name'] }}</td>
+                    <td>{{ item['Life Ladder'] }}</td>
+                    <td>{{ item['Social support'] }}</td>
+                    <td>{{ item['Healthy life expectancy at birth'] }}</td>
+                    <td>{{ item['Generosity'] }}</td>
+                    <td>{{ item['Perceptions of corruption'] }}</td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td colspan="6">Aucun résultat trouvé</td>
+                </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

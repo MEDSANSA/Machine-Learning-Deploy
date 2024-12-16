@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block solution %}
+<section class="hero-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-12 col-12">
+                <div class="hero-content">
+                    <h1 class="wow fadeInLeft" data-wow-delay=".4s">“Happiness is not something ready-made. It comes from your own actions.”</h1>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-7 col-11">
+                <div class="hero-image wow fadeInRight" data-wow-delay=".4s">
+                    <img src="{{url_for('static', filename='assets/images/emoji.png')}}" alt="#">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

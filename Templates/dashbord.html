@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block solution %}
+<section class="hero-area">
+    <div id="dashbord">
+        <iframe 
+    title="mll" 
+    width="1140" 
+    height="541.25" 
+    src="https://app.powerbi.com/reportEmbed?reportId=36f4e9c3-91c3-4194-9a87-d83cd1a5c3b6&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&filterPaneEnabled=false&navContentPaneEnabled=false" 
+    frameborder="0" 
+    allowFullScreen="true">
+</iframe>
+
+    </div>
+</section>
+<style>
+    #dashbord {
+        font-family: Arial, sans-serif;
+        margin: 20px auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #dashbord iframe {
+        width: 100%;
+        max-width: 1600px;
+        height: 900px;
+        border: none;
+    }
+</style>
+{% endblock %}
